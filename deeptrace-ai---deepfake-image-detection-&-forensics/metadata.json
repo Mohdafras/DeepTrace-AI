@@ -1,0 +1,6 @@
+{
+  "name": "DeepTrace AI - Deepfake Image Detection & Forensics",
+  "description": "A local FastAPI-backed image classification workspace with EfficientNetB0 and Grad-CAM decision support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

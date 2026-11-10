@@ -1,0 +1,46 @@
+@import "tailwindcss";
+/* Local labeled images are not utility-class source files. */
+@source not "../dataset";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+:root { color-scheme: dark; --surface: #080D18; --panel: #111B2D; --border: #243247; --text: #F8FAFC; --muted: #94A3B8; --accent: #21D4FD; }
+@layer base {
+  body { margin: 0; font-family: var(--font-sans); background: var(--surface); color: var(--text); }
+  button, a, input, select, summary { -webkit-tap-highlight-color: transparent; }
+  button:not(:disabled), summary { cursor: pointer; }
+  button:disabled { cursor: not-allowed; opacity: .55; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  img { max-width: 100%; }
+}
+@layer components {
+  .panel { padding: 1.25rem; background: var(--panel); border: 1px solid var(--border); border-radius: .875rem; min-width: 0; }
+  .btn-primary, .btn-secondary, .btn-danger { display: inline-flex; justify-content: center; align-items: center; gap: .4rem; padding: .65rem 1rem; border-radius: .5rem; font-size: .75rem; font-weight: 700; line-height: 1.4; transition: background-color .15s; }
+  .btn-primary { background: var(--accent); color: var(--surface); border: 1px solid var(--accent); }
+  .btn-primary:hover:not(:disabled) { background: #67e8f9; }
+  .btn-secondary { background: #152238; color: var(--text); border: 1px solid var(--border); }
+  .btn-secondary:hover:not(:disabled) { background: #243247; }
+  .btn-danger { background: #F43F5E15; color: #fda4af; border: 1px solid #F43F5E60; }
+  .field { width: 100%; min-width: 0; border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: .5rem; padding: .7rem .8rem; font-size: .75rem; }
+  .notice { background: #F59E0B0d; border: 1px solid #F59E0B55; border-radius: .75rem; padding: 1rem; color: var(--text); font-size: .75rem; overflow-wrap: anywhere; }
+  .error-notice { background: #F43F5E0d; border: 1px solid #F43F5E55; border-radius: .75rem; padding: 1rem; color: #fda4af; font-size: .75rem; overflow-wrap: anywhere; }
+}
+.app-dialog { background: var(--panel); color: var(--text); border: 1px solid var(--border); border-radius: 1rem; padding: 1.25rem; width: min(36rem, calc(100vw - 2rem)); max-width: calc(100vw - 2rem); max-height: calc(100dvh - 2rem); margin: auto; overflow-y: auto; overflow-wrap: anywhere; box-shadow: 0 24px 80px #0008; }
+.app-dialog::backdrop { background: #000b; backdrop-filter: blur(4px); }
+.dialog-wide { width: min(64rem, calc(100vw - 2rem)); }
+.dialog-drawer { margin: 0 auto 0 0; width: min(19rem, calc(100vw - 2rem)); height: 100dvh; max-height: 100dvh; border-radius: 0 .875rem .875rem 0; }
+.skip-link { position: fixed; z-index: 100; left: 1rem; top: -5rem; background: var(--accent); color: var(--surface); padding: .75rem; border-radius: .5rem; }
+.skip-link:focus { top: .5rem; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0B1220; }
+::-webkit-scrollbar-thumb { background: #334764; border-radius: 99px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+@media (forced-colors: active), print {
+  .chart-panel svg { display: none; }
+  /* Undo every sr-only property, not just display, so the data stays readable. */
+  .chart-data { display: block !important; position: static !important; width: auto !important; height: auto !important; margin: 0 !important; padding: 1rem !important; overflow: visible !important; clip: auto !important; clip-path: none !important; white-space: normal !important; }
+  .chart-data > * { display: revert !important; }
+}
+@media print { aside, header, button { display: none !important; } }

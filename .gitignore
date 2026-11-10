@@ -1,0 +1,212 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Datasets
+backend/dataset/
+backend/datasets/
+**/dataset/
+**/datasets/
+
+# Training checkpoints and experiments
+backend/model/candidates/
+**/checkpoints/
+*.ckpt
+*.index
+
+# Python and ML cache
+.pytest_cache/
+.mypy_cache/
+.tensorflow/
+.keras/
+
+# Node
+node_modules/
+dist/
+build/
+
+# Local databases and logs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+# Python environments
+.venv/
+venv/
+env/
+.doc-tools/
+**/.doc-tools/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+dist/
+
+# Temporary Word files
+~$*.docx
+
+# Temporary and generated files
+*.tmp
+*.log
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+
+# Word temporary lock files
+~$*.docx
+
+# Report-generation environment
+**/.doc-tools/
+
+# Local Claude settings
+.claude/settings.local.json
+
+# Raw experiment and temporary evidence
+completion-20261110/
+
+# Word temporary files
+~$*.docx
+
+# Report generation environment
+**/.doc-tools/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environment and secrets
+.env
+.venv/
+venv/
+
+# Frontend dependencies and builds
+node_modules/
+dist/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Local dataset inspection and smoke-test evidence
+backend/browser-labeled-20261106/
+backend/dataset-inspection-20261106/
+backend/dataset-inspection-20261106-verified/
+backend/dataset-inspection-report.html
+backend/labeled-api-smoke-20261106.json
+
+# Model backups
+backend/model/backups/
+
+# Local report-generation and experiment files
+completion-final/build_historical_curves.py
+completion-final/check_production_http.py
+completion-final/check_restored_http.py
+completion-final/close_followup.py
+completion-final/control-validation-*
+completion-final/demo-pack-status.json
+completion-final/demo-predictions.TEMPLATE.csv
+completion-final/execution-interruption.json
+completion-final/experiment-*
+completion-final/historical-*
+completion-final/history-curves.template.html
+completion-final/inspect_interruption.py
+completion-final/interruption-audit.json
+completion-final/production-*
+completion-final/render_historical_curves.cjs
+completion-final/experiment-scripts/
+completion-final/historical-curves-render/
+completion-final/historical-curves-render-002/
+completion-final/project-report/assets/
+completion-final/project-report/pdf-page-renders/
+completion-final/project-report/reference-inspection/
+completion-final/project-report/build_report.py
+completion-final/project-report/canonical-text.txt
+completion-final/project-report/pdf-extracted-text.txt
+completion-final/project-report/*renderer*.json
+completion-final/project-report/quality-check.json
+completion-final/project-report/*integrity*.json
+completion-final/project-report/prepare_report_assets.py
+completion-final/project-report/render_docx_pdf.py
+completion-final/project-report/verify_report.py
+completion-final/project-report/export_word_pdf*.ps1
+completion-final/project-report/asset-provenance.json
+
+# Local evidence and dataset inspection
+backend/browser-labeled-20261106/
+backend/dataset-inspection-20261106/
+backend/dataset-inspection-20261106-verified/
+backend/dataset-inspection-report.html
+backend/labeled-api-smoke-20261106.json
+backend/model/backups/
+
+# Local experiment and audit artifacts
+completion-final/COMPLETION_STATUS.json
+completion-final/EVIDENCE_INVENTORY.json
+completion-final/EXPERIMENT_POINTER.json
+completion-final/POST_COMPLETION_RUNTIME_UPDATE.md
+completion-final/build_historical_curves.py
+completion-final/check_production_http.py
+completion-final/check_restored_http.py
+completion-final/close_followup.py
+completion-final/control-validation-*
+completion-final/demo-pack-status.json
+completion-final/demo-predictions.TEMPLATE.csv
+completion-final/execution-interruption.json
+completion-final/experiment-*
+completion-final/historical-*
+completion-final/history-curves.template.html
+completion-final/inspect_interruption.py
+completion-final/interruption-audit.json
+completion-final/production-*
+completion-final/render_historical_curves.cjs
+
+# Report-generation assets and temporary files
+completion-final/project-report/assets/
+completion-final/project-report/pdf-page-renders/
+completion-final/project-report/reference-inspection/
+completion-final/project-report/build_report.py
+completion-final/project-report/canonical-text.txt
+completion-final/project-report/pdf-extracted-text.txt
+completion-final/project-report/pdf-renderer.json
+completion-final/project-report/prepare_report_assets.py
+completion-final/project-report/quality-check.json
+completion-final/project-report/*integrity*.json
+completion-final/project-report/render_docx_pdf.py
+completion-final/project-report/verify_report.py
+completion-final/project-report/export_word_pdf*.ps1
+completion-final/project-report/asset-provenance.json
